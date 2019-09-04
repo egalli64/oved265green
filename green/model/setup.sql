@@ -30,6 +30,6 @@ email varchar2(100)
 CREATE SEQUENCE adm_id; 
 
 
-insert INTO adm values (adm_id.nextval, 'Maurizio', 'Pilato', 3664464008, 'maurizio.pilato90@gmail.com');
-insert INTO adm values (adm_id.nextval, 'Silvia', 'Di Caro', 3291909119, 'silviadicaro@libero.it');
-insert INTO adm values (adm_id.nextval, 'Federica', 'Cosenza', 3664464008, 'federica.cosenza92@gmail.com');
+insert INTO adm values (adm_id.nextval, 'Maurizio', 'Pilato', 'maurizio.pilato90@gmail.com');
+insert INTO adm values (adm_id.nextval, 'Silvia', 'Di Caro', 'silviadicaro@libero.it');
+insert INTO adm values (adm_id.nextval, 'Federica', 'Cosenza', 'federica.cosenza92@gmail.com');
