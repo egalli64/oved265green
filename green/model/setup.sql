@@ -1,4 +1,8 @@
-create table users_name(
+DROP TABLE users;
+DROP TABLE adm;
+
+
+create table users(
 user_id integer primary key,
 first_name varchar2(40),
 last_name varchar2(40),
@@ -13,9 +17,9 @@ carta_credito number(16,0)
 CREATE SEQUENCE user_id; 
 
 
-insert INTO users_name values (user_id.nextval, 'Maurizio', 'Pilato', 3664464008, 'maurizio.pilato90@gmail.com','19-OTT-1990', 'Caltanissetta' , '800A', 1254789632212471);
-insert INTO users_name values (user_id.nextval, 'Silvia', 'Di Caro', 3291909119, 'silviadicaro@libero.it','23-LUG-1993', 'Palermo' , '700A', 1754896322212471);
-insert INTO users_name values (user_id.nextval, 'Federica', 'Cosenza', 3664464008, 'federica.cosenza92@gmail.com','23-LUG-1992', 'Messina' , '600A', 1754896322754123);
+insert INTO users values (user_id.nextval, 'Maurizio', 'Pilato', 3664464008, 'maurizio.pilato90@gmail.com','19-OTT-1990', 'Caltanissetta' , '800A', 1254789632212471);
+insert INTO users values (user_id.nextval, 'Silvia', 'Di Caro', 3291909119, 'silviadicaro@libero.it','23-LUG-1993', 'Palermo' , '700A', 1754896322212471);
+insert INTO users values (user_id.nextval, 'Federica', 'Cosenza', 3664464008, 'federica.cosenza92@gmail.com','23-LUG-1992', 'Messina' , '600A', 1754896322754123);
 
 
 --Tabella Amministratori
