@@ -25,14 +25,14 @@ insert INTO users values (user_seq.nextval, 'Federica', 'Cosenza', 3664464008, '
 
 --Tabella Amministratori
 
-create table adm_seq(
+create table adm(
 user_id integer primary key,
 first_name varchar2(40),
 last_name varchar2(40),
 email varchar2(100)
 );
 
-CREATE SEQUENCE adm_id; 
+CREATE SEQUENCE adm_seq; 
 
 
 insert INTO adm values (adm_seq.nextval, 'Maurizio', 'Pilato', 'maurizio.pilato90@gmail.com');
