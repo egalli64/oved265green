@@ -1,0 +1,10 @@
+@charset "ISO-8859-1";
+body {
+    background-color: #f2fafd;
+}
+
+
+button:hover {
+  background-color: #75baff; /* Green */
+  color: white;
+}
