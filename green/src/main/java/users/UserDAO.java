@@ -47,14 +47,14 @@ public class UserDAO {
 
 		try {
 			PreparedStatement selectMailQuery = null;
-			String s = "SELECT COUNT(*) email FROM users WHERE email='?'";
+			String s = "SELECT COUNT(*) FROM users WHERE email=?";
 			selectMailQuery = conn.prepareStatement(s);
 			selectMailQuery.setString(1, email);
 			ResultSet checkMail = selectMailQuery.executeQuery();
 			checkMail.next();
 			if (checkMail.getInt(1) == 0) {
 				PreparedStatement createNewUserQuery = null;
-				String insert = "INSERT INTO users VALUES(user_seq.nextval,'?','?','?','?','?',?,'?','?',?, '?',' ?', ?)";
+				String insert = "INSERT INTO users VALUES(user_seq.nextval,?,?,?,?,?,?,?,?,?,?,?,?)";
 				createNewUserQuery = conn.prepareStatement(insert);
 				createNewUserQuery.setString(1, userName);
 				createNewUserQuery.setString(2, userLastName);
