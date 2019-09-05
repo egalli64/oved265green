@@ -1,8 +1,6 @@
 package users;
 
 import java.io.IOException;
-import java.time.LocalDate;
-
 import javax.annotation.Resource;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
