@@ -12,15 +12,17 @@ email varchar2(100),
 data_nascita date, 
 luogo_nascita varchar2(40),
 n_patente varchar2(10),
-carta_credito number(16,0)
+scadenza_patente date,
+carta_credito number(16,0), 
+cvv number(3,0)
 );
 
 CREATE SEQUENCE user_seq; 
 
 
-insert INTO users values (user_seq.nextval, 'Maurizio', 'Pilato', 3664464008, 'maurizio.pilato90@gmail.com','19-OTT-1990', 'Caltanissetta' , '800A', 1254789632212471);
-insert INTO users values (user_seq.nextval, 'Silvia', 'Di Caro', 3291909119, 'silviadicaro@libero.it','23-LUG-1993', 'Palermo' , '700A', 1754896322212471);
-insert INTO users values (user_seq.nextval, 'Federica', 'Cosenza', 3664464008, 'federica.cosenza92@gmail.com','23-LUG-1992', 'Messina' , '600A', 1754896322754123);
+insert INTO users values (user_seq.nextval, 'Maurizio', 'Pilato', 3664464008, 'maurizio.pilato90@gmail.com','19-OTT-1990', 'Caltanissetta' , '800A','19-OTT-2023', 1254789632212471, 123);
+insert INTO users values (user_seq.nextval, 'Silvia', 'Di Caro', 3291909119, 'silviadicaro@libero.it','23-LUG-1993', 'Palermo' , '700A','23-LUG-2026' 1754896322212471, 458);
+insert INTO users values (user_seq.nextval, 'Federica', 'Cosenza', 3664464008, 'federica.cosenza92@gmail.com','23-LUG-1992', 'Messina' , '600A','23-LUG-2025' 1754896322754123, 215);
 
 
 --Tabella Amministratori
