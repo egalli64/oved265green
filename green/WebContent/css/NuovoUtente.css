@@ -1,23 +1,43 @@
 @charset "ISO-8859-1";
+
 body {
-    background-color: #f2fafd;
+	background-color: #d9ffd9;
 }
 
 button:hover {
-  border: 2px solid #008080;
-  color: #008080;
+	border: 2px solid #008080;
+	/* Green */
+	color: #008080;
 }
 
 label {
 	font-family: font_name, Comic Sans MS, sans-serif;
 	font-size: 20px;
 	color: white;
-	
 }
 
 input:hover {
 	border: 2px solid #008080;
+	/* Green */
 	color: #008080;
+}
+
+a {
+	color: white;
+}
+
+h1 {
+	font-family: 'Snell Roundhand';
+	font-style: cursive;
+	font-variant: normal;
+	font-weight: 70;
+	font-size: 70px;
+}
+
+p {
+	color: #ff0000;
+	text-align:center;
+	
 }
 
 h2 {
