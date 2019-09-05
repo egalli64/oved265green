@@ -40,7 +40,7 @@
 					<div>
 						<label for="mail">Email:</label><input type="text" id="mail"
 							name="mail"> <br> <br> <label for="password">Password:</label><input
-							type="text" id="password" name="password"> <br> <br>
+							type="password" id="password" name="password"> <br> <br>
 						<div>
 							<a href="/green/NuovoUtente.html ">New User</a>
 						</div>
