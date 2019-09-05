@@ -66,7 +66,7 @@ body {overflow-y:auto;}
 	</nav>
 
 	<div class="jumbotron card card-image"
-		style="background-image: url(/green/pic/audi.jpg);">
+		style="background-image: url(/green/pic/audi.jpg)" position: absolute; >
 		<div class="text-white text-center py-5 px-4">
 			<div>
 				<h1>
