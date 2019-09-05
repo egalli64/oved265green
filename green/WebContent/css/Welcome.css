@@ -40,3 +40,14 @@ p {
 	
 }
 
+nav {
+
+  background-color: grey;
+  overflow: hidden;
+}
+
+nav:hover {
+  background-color: green;
+  color: black;
+}
+
