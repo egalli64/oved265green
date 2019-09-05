@@ -38,7 +38,7 @@
 			<br/>
 			<br/>
 			
-			<label for="birthdate"> Date of birth:</label> <input type="text" id="birthdate"
+			<label for="birthdate"> Date of birth:</label> <input type="date" id="birthdate"
 				name="birthdate" required>
 			<br/>
 			<br/>

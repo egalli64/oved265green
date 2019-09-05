@@ -13,10 +13,7 @@
 </style>
 <title>Welcome</title>
 </head>
-<style type="text/css">
-body { height: 100%; width:100%; margin: 0; padding: 0;}
-#sfondo {position:fixed; top:0; left:0; width:100%; height:100%; z-index:-1;}
-</style>
+
 <!--[if IE ]>
 <style type="text/css">
 /* css per MIE browsers */
@@ -65,8 +62,8 @@ body {overflow-y:auto;}
 		</div>
 	</nav>
 
-	<div class="jumbotron card card-image"
-		style="background-image: url(/green/pic/audi.jpg)" position: absolute; >
+	<div class="jumbotron card card-image" 
+		style="background-image: url(/green/pic/audi.jpg)" >
 		<div class="text-white text-center py-5 px-4">
 			<div>
 				<h1>
