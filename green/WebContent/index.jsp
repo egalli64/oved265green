@@ -36,7 +36,7 @@ body {overflow-y:auto;}
 				<li class="nav-item active"><a class="nav-link" href="#">Home
 						<span class="sr-only"></span>
 				</a></li>
-				<li class="nav-item"><a class="nav-link" href="#">Sign up</a></li>
+				<li class="nav-item"><a class="nav-link" href="/green/NuovoUtente.jsp ">Sign up</a></li>
 				<li class="nav-item"><a class="nav-link" href="#">Price
 						list</a></li>
 				<li class="nav-item"><a class="nav-link" href="#">About us</a>
@@ -62,8 +62,8 @@ body {overflow-y:auto;}
 		</div>
 	</nav>
 
-	<div class="jumbotron card card-image" 
-		style="background-image: url(/green/pic/audi.jpg)" >
+	<div class="jumbotron card card-image"
+		style="background-image: url(/green/pic/audi.jpg)"  >
 		<div class="text-white text-center py-5 px-4">
 			<div>
 				<h1>
