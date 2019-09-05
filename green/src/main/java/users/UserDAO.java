@@ -27,15 +27,15 @@ public class UserDAO {
 			getUserByMailAndPasswordQuery.setString(1, mail);
 			getUserByMailAndPasswordQuery.setString(2, password);
 			ResultSet rs = getUserByMailAndPasswordQuery.executeQuery();
-
+			rs.next();
 			if (rs.getInt(1) == 1) {
 				return true;
 			} else {
 				return false;
 			}
-
+			
 		} catch (SQLException se) {
 			throw new IllegalStateException("Database issue " + se.getMessage());
-		}
-	}
+		}	
+			}
 }

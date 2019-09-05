@@ -25,10 +25,10 @@ public class UserLogIn extends HttpServlet {
 		String mail = request.getParameter("mail");
 		String password = request.getParameter("password");
 		if (userDao.checkUserByMailAndPassword(mail, password)) {
-			request.getRequestDispatcher("/WebContent/LogIn.html").forward(request, response);
+			request.getRequestDispatcher("/LogIn.html").forward(request, response);
 		} else {
 			request.setAttribute("resultLogIN", userDao.checkUserByMailAndPassword(mail, password));
-			request.getRequestDispatcher("/WebContent/index.jsp").forward(request, response);
+			request.getRequestDispatcher("/index.jsp").forward(request, response);
 		}
 	}
 
