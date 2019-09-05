@@ -12,11 +12,11 @@
 
 <body>
 
-<p>
-<img src="./pic/audi.jpg" class="img-fluid" alt="Audi Elettrica"/>
-</p>
 
-<h2><i><b>Welcome</b></i></h2>
+<div class="jumbotron card card-image" style="background-image: url(./pic/audi.jpg);">
+  <div class="text-white text-center py-5 px-4">
+    <div>
+      <h2><i><b>Welcome</b></i></h2>
  <div><a href="/green/Admin.html">Admin</a></div>
 <hr>
 <br>
@@ -43,8 +43,9 @@
 			<button type="submit">Login</button>
 		</div>
 	</form>
-
-<c:if test= 
+  </div>
+</div>
+</div>
 
 </body>
 </html>
