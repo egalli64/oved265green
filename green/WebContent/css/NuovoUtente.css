@@ -4,6 +4,19 @@ body {
 }
 
 button:hover {
-  background-color: #75baff; /* Green */
-  color: white;
+  border: 2px solid #008080;
+	/* Green */
+	color: #008080;
+}
+
+label {
+	font-family: font_name, Comic Sans MS, sans-serif;
+	font-size: 20px;
+	color: white;
+}
+
+input:hover {
+	border: 2px solid #008080;
+	/* Green */
+	color: #008080;
 }
