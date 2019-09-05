@@ -14,14 +14,6 @@
 <title>Welcome</title>
 </head>
 
-<!--[if IE ]>
-<style type="text/css">
-/* css per MIE browsers */
-html {overflow-y:hidden;}
-body {overflow-y:auto;}
-#sfondo {position:absolute; z-index:-1;}
-</style>
-<![endif]-->
 <body>
 <nav class="navbar navbar-expand-lg  ">
 
@@ -41,7 +33,7 @@ body {overflow-y:auto;}
 						list</a></li>
 				<li class="nav-item"><a class="nav-link" href="#">About us</a>
 				</li>
-				<li class="nav-item"><a class="nav-link" href="#">Administrator</a>
+				<li class="nav-item"><a class="nav-link" href="/green/Admin.html">Administrators</a>
 				</li>
 			</ul>
 			<form class="form-inline my-2 my-lg-0"
@@ -62,9 +54,8 @@ body {overflow-y:auto;}
 		</div>
 	</nav>
 
-	<div class="jumbotron card card-image"
-		style="background-image: url(/green/pic/audi.jpg)"  >
-		<div class="text-white text-center py-5 px-4">
+	
+		<div class="text-white text-center"   >
 			<div>
 				<h1>
 					<i><b>Welcome</b></i>
