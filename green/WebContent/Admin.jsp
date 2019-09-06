@@ -25,7 +25,7 @@
 					</c:if>
 				</div>
 
-				<form action="/green/admins/AdminLogIn  ">
+				<form action="/green/admins/AdminLogIn" method="post">
 
 					<div>
 
