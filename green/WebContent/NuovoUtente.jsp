@@ -6,7 +6,7 @@
 <head>
 <meta charset="ISO-8859-1">
 <!-- <style type="text/css"> @import url(/green/css/NuovoUtente.css);</style> -->
-<title>Insert title here</title>
+<title>New User</title>
 </head>
 <body>
 

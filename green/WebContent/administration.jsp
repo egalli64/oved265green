@@ -25,9 +25,9 @@
 				<li class="nav-item active"><a class="nav-link" href="/green/index.jsp">Home <span
 						class="sr-only"></span>
 				</a></li>
-				<li class="nav-item"><a class="nav-link" href="/green/NuovoAdimn.jsp ">Add new
+				<li class="nav-item"><a class="nav-link" href="/green/NuovoAdmin.jsp ">Add new
 						administrator</a></li>
-				<li class="nav-item"><a class="nav-link" href="#">Manage Registered Users</a></li>
+				<li class="nav-item"><a class="nav-link" href="/green/admins/ShowTabUser">Manage Registered Users</a></li>
 				<li class="nav-item"><a class="nav-link" href="#">Manage Admins</a></li>
 			</ul>
 		</div>

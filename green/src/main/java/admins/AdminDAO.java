@@ -40,63 +40,47 @@ public class AdminDAO {
 		}
 	}
 
-//	public boolean createNewUser(String userName, String userLastName, String phone, String email, String password,
-//			LocalDate birthDate, String birthPlace, String license, LocalDate expiringLicense, Long creditCard,
-//			Integer cvv, LocalDate expirationcard) {
-//
-//		try {
-//			PreparedStatement selectMailQuery = null;
-//			String s = "SELECT COUNT(*) FROM users WHERE email=?";
-//			selectMailQuery = conn.prepareStatement(s);
-//			selectMailQuery.setString(1, email);
-//			ResultSet checkMail = selectMailQuery.executeQuery();
-//			checkMail.next();
-//			if (checkMail.getInt(1) == 0) {
-//				PreparedStatement createNewUserQuery = null;			
-//				String insert = "INSERT INTO users VALUES(user_seq.nextval,?,?,?,?,?,?,?,?,?,?,?,?)";
-//				createNewUserQuery = conn.prepareStatement(insert);
-//				createNewUserQuery.setString(1, userName);
-//				createNewUserQuery.setString(2, userLastName);
-//				createNewUserQuery.setString(3, phone);
-//				createNewUserQuery.setString(4, email);
-//				createNewUserQuery.setString(5, password);
-//				createNewUserQuery.setDate(6, Date.valueOf(birthDate));
-//				createNewUserQuery.setString(7, birthPlace);
-//				createNewUserQuery.setString(8, license);
-//				createNewUserQuery.setDate(9, Date.valueOf(expiringLicense));
-//				createNewUserQuery.setLong(10, creditCard);
-//				createNewUserQuery.setInt(11, cvv);
-//				createNewUserQuery.setDate(12, Date.valueOf(expirationcard));
-//				createNewUserQuery.executeUpdate();
-//				
-//				PreparedStatement selectUserQuery = null;
-//				String select = "SELECT * FROM users WHERE email=?";
-//				selectUserQuery = conn.prepareStatement(select);				
-//				selectUserQuery.setString(1, email);
-//				ResultSet rs = selectUserQuery.executeQuery();
-//     			AdminBean user = new AdminBean();
-//				while (rs.next()) {
-//					user.setUserName(rs.getString("FIRST_NAME"));
-//					user.setUserLastName(rs.getString("LAST_NAME"));
-//					user.setPhoneNumber(rs.getString("PHONE_NUMBER"));
-//					user.setMail(rs.getString("EMAIL"));
-//					user.setPassword(rs.getString("PASSWORD"));
-//					user.setDateOfBirth((rs.getDate("DATA_NASCITA")).toLocalDate());
-//					user.setPlaceOfbirth(rs.getString("LUOGO_NASCITA"));
-//					user.setDrivingLicense(rs.getString("N_PATENTE"));
-//					user.setExpiringDateDrivingLicense((rs.getDate("SCADENZA_PATENTE")).toLocalDate());
-//					user.setCreditCardNumber(rs.getLong("CARTA_CREDITO"));
-//					user.setCvv(rs.getInt("CVV"));
-//					user.setExpiringDateCreditCard((rs.getDate("SCADENZA_CARTA")).toLocalDate());
-//				}
-//				return true;
-//			} else {
-//				return false;
-//			}
-//		} catch (SQLException se) {
-//			throw new IllegalStateException("Database issue " + se.getMessage());
-//		}
-//
-//	}
+	public boolean createNewAdmin(String userName, String userLastName, String password, String email) {
 
+		try {
+			PreparedStatement selectMailQuery = null;
+			String s = "SELECT COUNT(*) FROM adm WHERE email=?";
+			selectMailQuery = conn.prepareStatement(s);
+			selectMailQuery.setString(1, email);
+			ResultSet checkMail = selectMailQuery.executeQuery();
+			checkMail.next();
+			if (checkMail.getInt(1) == 0) {
+				PreparedStatement createNewAdminQuery = null;			
+				String insert = "INSERT INTO adm VALUES(adm_seq.nextval,?,?,?,?)";
+				createNewAdminQuery = conn.prepareStatement(insert);
+				createNewAdminQuery.setString(1, userName);
+				createNewAdminQuery.setString(2, userLastName);
+				createNewAdminQuery.setString(3, password);
+				createNewAdminQuery.setString(4, email);				
+				createNewAdminQuery.executeUpdate();
+				
+				PreparedStatement selectAdminQuery = null;
+				String select = "SELECT * FROM adm WHERE email=?";
+				selectAdminQuery = conn.prepareStatement(select);				
+				selectAdminQuery.setString(1, email);
+				ResultSet rs = selectAdminQuery.executeQuery();
+     			AdminBean admin = new AdminBean();
+				while (rs.next()) {
+					admin.setAdminName(rs.getString("FIRST_NAME"));
+					admin.setAdminLastName(rs.getString("LAST_NAME"));		
+					admin.setMail(rs.getString("EMAIL"));
+					admin.setPassword(rs.getString("PASSWORD"));					
+				}
+				return true;
+			} else {
+				return false;
+			}
+		} catch (SQLException se) {
+			throw new IllegalStateException("Database issue " + se.getMessage());
+		}
+
+	}
+
+	
+	
 }

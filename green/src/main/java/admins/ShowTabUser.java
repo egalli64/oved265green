@@ -8,30 +8,22 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.sql.DataSource;
+import users.UserDAO;
 
-@WebServlet("/admins/NewAdmin")
-public class NewAdmin extends HttpServlet {
+@WebServlet("/admins/ShowTabUser")
+public class ShowTabUser extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-
+	
 	@Resource(name = "jdbc/green")
 	private DataSource ds;
 
 	@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-
-		AdminDAO adminDao = new AdminDAO(ds);
-		String firstName = request.getParameter("firstName");
-		String LastName = request.getParameter("LastName");
-		String email = request.getParameter("email");
-		String password = request.getParameter("password");
-
-		if (adminDao.createNewAdmin(firstName, LastName, password, email)) {
-			request.getRequestDispatcher("/addConfirmed.html").forward(request, response);
-		} else {
-			request.setAttribute("resultAdd", adminDao.createNewAdmin(firstName, LastName, password, email));
-			request.getRequestDispatcher("/NuovoAdmin.jsp").forward(request, response);
-		}
+		
+		UserDAO userDao = new UserDAO(ds);		
+		request.setAttribute("users", userDao.showUsers());		
+		request.getRequestDispatcher("/usersTab.jsp").forward(request, response);
 	}
 
 	@Override
@@ -39,5 +31,5 @@ public class NewAdmin extends HttpServlet {
 			throws ServletException, IOException {
 		doGet(request, response);
 	}
-
+	
 }
