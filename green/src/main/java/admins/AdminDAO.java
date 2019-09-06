@@ -4,6 +4,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 import javax.sql.DataSource;
 
 public class AdminDAO {
@@ -50,26 +52,26 @@ public class AdminDAO {
 			ResultSet checkMail = selectMailQuery.executeQuery();
 			checkMail.next();
 			if (checkMail.getInt(1) == 0) {
-				PreparedStatement createNewAdminQuery = null;			
+				PreparedStatement createNewAdminQuery = null;
 				String insert = "INSERT INTO adm VALUES(adm_seq.nextval,?,?,?,?)";
 				createNewAdminQuery = conn.prepareStatement(insert);
 				createNewAdminQuery.setString(1, userName);
 				createNewAdminQuery.setString(2, userLastName);
 				createNewAdminQuery.setString(3, password);
-				createNewAdminQuery.setString(4, email);				
+				createNewAdminQuery.setString(4, email);
 				createNewAdminQuery.executeUpdate();
-				
+
 				PreparedStatement selectAdminQuery = null;
 				String select = "SELECT * FROM adm WHERE email=?";
-				selectAdminQuery = conn.prepareStatement(select);				
+				selectAdminQuery = conn.prepareStatement(select);
 				selectAdminQuery.setString(1, email);
 				ResultSet rs = selectAdminQuery.executeQuery();
-     			AdminBean admin = new AdminBean();
+				AdminBean admin = new AdminBean();
 				while (rs.next()) {
 					admin.setAdminName(rs.getString("FIRST_NAME"));
-					admin.setAdminLastName(rs.getString("LAST_NAME"));		
+					admin.setAdminLastName(rs.getString("LAST_NAME"));
 					admin.setMail(rs.getString("EMAIL"));
-					admin.setPassword(rs.getString("PASSWORD"));					
+					admin.setPassword(rs.getString("PASSWORD"));
 				}
 				return true;
 			} else {
@@ -81,6 +83,26 @@ public class AdminDAO {
 
 	}
 
-	
-	
+	public List<AdminBean> showAdmins() {
+		List<AdminBean> adminList = new ArrayList<>();
+
+		try {
+			PreparedStatement selectAdminsQuery = null;
+			String select = "SELECT * FROM adm";
+			selectAdminsQuery = conn.prepareStatement(select);
+			ResultSet rs = selectAdminsQuery.executeQuery();
+			while (rs.next()) {
+				AdminBean admin = new AdminBean();
+				admin.setAdminName(rs.getString("FIRST_NAME"));
+				admin.setAdminLastName(rs.getString("LAST_NAME"));
+				admin.setMail(rs.getString("EMAIL"));
+				admin.setPassword(rs.getString("PASSWORD"));
+				adminList.add(admin);
+			}
+			return adminList;
+		} catch (SQLException se) {
+			throw new IllegalStateException("Database issue " + se.getMessage());
+		}
+	}
+
 }
