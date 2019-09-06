@@ -39,8 +39,8 @@
 				type="text" id="license" name="license" required> <br /> <br /> <label
 				for="expiration">Expiry of the driving licence:</label> <input type="date" id="expiration"
 				name="expirationLicense" required> <br /> <br /> <label for="card"> Credit
-				card:</label> <input type="number" id="card" name="creditCard" maxlength="16" required> <br /> <br /> <label
-				for="cvv"> Cvv:</label> <input type="number" id="cvv" name="cvv" maxlength="3" required> <br /> <br />
+				card:</label> <input type="number" id="card" name="creditCard" max="9999999999999999" required> <br /> <br /> <label
+				for="cvv"> Cvv:</label> <input type="number" id="cvv" name="cvv" max="999" required> <br /> <br />
 			<label for="expiration_c"> Credit card expiration:</label> <input type="date" id="expiration_c"
 				name="expirationCard" required> <br /> <br />
 		</div>

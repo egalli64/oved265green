@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Users Tab</title>
+<title>Admin Tab</title>
 
 <!-- STYLE -->
 <meta charset="utf-8">
@@ -17,37 +17,25 @@ shrink-to-fit=no">
 }
 </style>
 
-
 </head>
 <body>
 
 	<div class="container-fluid">
 		<div class="row"></div>
 
-		<c:if test="${(users != null)}">
+		<c:if test="${(admins != null)}">
 			<div class="row mytab">
 				<table>
 					<tr> <!-- class="bg-danger text-white" -->
 						<th>First Name</th>
 						<th>Last Name</th>
-						<th>Phone</th>
 						<th>Email</th>
-						<th>Date of birth</th>
-						<th>Place of birth</th>
-						<th>Driving License No</th>
-						<th>Driving License Expiring Date</th>
 					</tr>
-
-					<c:forEach var="user" items="${users}">
+					<c:forEach var="admin" items="${admins}">
 						<tr> <!-- class="bg-danger text-white" -->
-							<td>${user.userName}</td>
-							<td>${user.userLastName}</td>
-							<td>${user.phoneNumber}</td>
-							<td>${user.mail}</td>
-							<td>${user.dateOfBirth}</td>
-							<td>${user.placeOfbirth}</td>
-							<td>${user.drivingLicense}</td>
-							<td>${user.expiringDateDrivingLicense}</td>
+							<td>${admin.adminName}</td>
+							<td>${admin.adminLastName}</td>
+							<td>${admin.mail}</td>
 						</tr>
 					</c:forEach>
 				</table>
