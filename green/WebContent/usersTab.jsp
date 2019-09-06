@@ -27,7 +27,7 @@ shrink-to-fit=no">
 		<c:if test="${(users != null)}">
 			<div class="row mytab">
 				<table>
-					<tr> <!-- class="bg-danger text-white" -->
+					<tr class="bg-danger text-white">
 						<th>First Name</th>
 						<th>Last Name</th>
 						<th>Phone</th>
@@ -39,7 +39,7 @@ shrink-to-fit=no">
 					</tr>
 
 					<c:forEach var="user" items="${users}">
-						<tr> <!-- class="bg-danger text-white" -->
+						<tr class="bg-danger text-white">
 							<td>${user.userName}</td>
 							<td>${user.userLastName}</td>
 							<td>${user.phoneNumber}</td>

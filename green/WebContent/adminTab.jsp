@@ -26,13 +26,13 @@ shrink-to-fit=no">
 		<c:if test="${(admins != null)}">
 			<div class="row mytab">
 				<table>
-					<tr> <!-- class="bg-danger text-white" -->
+					<tr class="bg-danger text-white">
 						<th>First Name</th>
 						<th>Last Name</th>
 						<th>Email</th>
 					</tr>
 					<c:forEach var="admin" items="${admins}">
-						<tr> <!-- class="bg-danger text-white" -->
+						<tr class="bg-danger text-white">
 							<td>${admin.adminName}</td>
 							<td>${admin.adminLastName}</td>
 							<td>${admin.mail}</td>
