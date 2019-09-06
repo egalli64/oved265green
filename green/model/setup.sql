@@ -14,7 +14,7 @@ data_nascita date,
 luogo_nascita varchar2(40),
 n_patente varchar2(10),
 scadenza_patente date,
-carta_credito number(16,0), 
+carta_credito number(16,0), -- il secondo num tra le parentesi indica il numero di cifre dopo la virgola.
 cvv number(3,0),
 scadenza_carta date
 );
@@ -33,12 +33,13 @@ create table adm(
 user_id integer primary key,
 first_name varchar2(40),
 last_name varchar2(40),
+password varchar2(20),
 email varchar2(100)
 );
 
 CREATE SEQUENCE adm_seq; 
 
 
-insert INTO adm values (adm_seq.nextval, 'Maurizio', 'Pilato', 'maurizio.pilato90@gmail.com');
-insert INTO adm values (adm_seq.nextval, 'Silvia', 'Di Caro', 'silviadicaro@libero.it');
-insert INTO adm values (adm_seq.nextval, 'Federica', 'Cosenza', 'federica.cosenza92@gmail.com');
+insert INTO adm values (adm_seq.nextval, 'Maurizio', 'Pilato', '0000', 'maurizio.pilato90@gmail.com');
+insert INTO adm values (adm_seq.nextval, 'Silvia', 'Di Caro', '1111', 'silviadicaro@libero.it');
+insert INTO adm values (adm_seq.nextval, 'Federica', 'Cosenza', '2222', 'federica.cosenza92@gmail.com');

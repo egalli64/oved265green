@@ -42,7 +42,6 @@ public class NewUser extends HttpServlet {
 		} else {
 			request.setAttribute("resultRegistration", userDao.createNewUser(firstName, LastName, phone, email,
 					password, birthdate, birthplace, license, expirationLicense, creditCard, cvv, expirationCard));
-			request.getRequestDispatcher("/registrationConfirmed.html");
 			request.getRequestDispatcher("/NuovoUtente.jsp").forward(request, response);
 		}
 	}
