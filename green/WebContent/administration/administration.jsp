@@ -34,8 +34,8 @@
 						Administrators</a></li>
 				<li class="nav-item"><p class="nav-link"></p></li>
 				<li class="nav-item"><p class="nav-link">Logged user:</p></li>
-				<c:if test="${(admin != null)}">
-					<li class="nav-item"><p class="nav-link">${admin.name} ${admin.lastName}</p></li>
+				<c:if test="${(loggedUser != null)}">
+					<li class="nav-item"><p class="nav-link">${loggedUser.name} ${loggedUser.lastName}</p></li>
 				</c:if>
 
 			</ul>

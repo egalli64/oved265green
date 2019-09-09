@@ -12,7 +12,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-@WebFilter(dispatcherTypes = { DispatcherType.REQUEST }, urlPatterns = { "/administration.jsp" })
+import admins.AdminBean;
+
+@WebFilter(dispatcherTypes = { DispatcherType.REQUEST }, urlPatterns = { "/administration/*" })
 public class AdminsFilter implements Filter {
 
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
@@ -21,8 +23,8 @@ public class AdminsFilter implements Filter {
 		if (request instanceof HttpServletRequest) {
 			HttpServletRequest hsr = (HttpServletRequest) request;
 			HttpSession sessionAdmin = hsr.getSession();
-//			sessionAdmin.getAttribute("admin")
-			if (sessionAdmin.getAttribute("admin") != null ) {
+			Object loggedUser = sessionAdmin.getAttribute("loggedUser");
+			if (loggedUser != null && loggedUser instanceof AdminBean) {
 				chain.doFilter(request, response);
 			}else {
 				HttpServletResponse hsr1 = (HttpServletResponse) response;

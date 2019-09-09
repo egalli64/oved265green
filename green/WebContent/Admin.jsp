@@ -20,7 +20,7 @@
 				</h2>
 
 				<div id='errorlogin'>
-					<c:if test="${admin == null}">
+					<c:if test="${logError}">
 						<p>User names or password not valid. Try again</p>
 					</c:if>
 				</div>
