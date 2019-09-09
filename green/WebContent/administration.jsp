@@ -35,7 +35,7 @@
 				<li class="nav-item"><p class="nav-link"></p></li>
 				<li class="nav-item"><p class="nav-link">Logged user:</p></li>
 				<c:if test="${(admin != null)}">
-					<li class="nav-item"><p class="nav-link">${admin.adminName}${admin.adminLastName}</p></li>
+					<li class="nav-item"><p class="nav-link">${admin.adminName} ${admin.adminLastName}</p></li>
 				</c:if>
 
 			</ul>
