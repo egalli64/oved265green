@@ -26,20 +26,25 @@ shrink-to-fit=no">
 
 		<c:if test="${(users != null)}">
 			<div class="row mytab">
-				<table>
-					<tr class="bg-danger text-white">
-						<th>First Name</th>
-						<th>Last Name</th>
-						<th>Phone</th>
-						<th>Email</th>
-						<th>Date of birth</th>
-						<th>Place of birth</th>
-						<th>Driving License No</th>
-						<th>Driving License Expiring Date</th>
+				<table class="table table-hover table-dark">
+				<thead>
+					<tr >
+					<th scope="col"> </th>
+						<th scope="col">First Name</th>
+						<th scope="col">Last Name</th>
+						<th scope="col">Phone</th>
+						<th scope="col">Email</th>
+						<th scope="col">Date of birth</th>
+						<th scope="col">Place of birth</th>
+						<th scope="col">Driving License No</th>
+						<th scope="col">Driving License Expiring Date</th>
 					</tr>
+					</thead>
+					<tbody>
 
 					<c:forEach var="user" items="${users}">
-						<tr class="bg-danger text-white">
+						<tr>
+						<th scope="row"> </th>
 							<td>${user.name}</td>
 							<td>${user.lastName}</td>
 							<td>${user.phoneNumber}</td>
@@ -49,7 +54,9 @@ shrink-to-fit=no">
 							<td>${user.drivingLicense}</td>
 							<td>${user.expiringDateDrivingLicense}</td>
 						</tr>
+						
 					</c:forEach>
+					</tbody>
 				</table>
 			</div>
 		</c:if>
