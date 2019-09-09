@@ -31,8 +31,7 @@ public class AdminLogIn extends HttpServlet {
 		Optional<AdminBean> opt = adminDao.checkAdminByNameFLAndPassword(firstName, lastName, password);
 		
 		if (opt.isPresent()) {
-			sessionAdmin.setAttribute("admin", opt.get());
-			request.setAttribute("user", opt.get());
+			sessionAdmin.setAttribute("admin", opt.get());			
 			request.getRequestDispatcher("/administration.jsp").forward(request, response);
 			
 		} else {

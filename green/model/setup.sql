@@ -43,3 +43,5 @@ CREATE SEQUENCE adm_seq;
 insert INTO adm values (adm_seq.nextval, 'Maurizio', 'Pilato', '0000', 'maurizio.pilato90@gmail.com');
 insert INTO adm values (adm_seq.nextval, 'Silvia', 'Di Caro', '1111', 'silviadicaro@libero.it');
 insert INTO adm values (adm_seq.nextval, 'Federica', 'Cosenza', '2222', 'federica.cosenza92@gmail.com');
+
+commit;
