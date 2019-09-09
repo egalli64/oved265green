@@ -35,6 +35,11 @@
 			<form class="form-inline my-2 my-lg-0" action="/green/users/UserLogIn">
 
 				<div>
+				<div id='errorlogin'>
+				<c:if test="${(resultLogIN == false)}">
+					<p>email address and password not found</p>
+				</c:if>
+			</div>
 					<input type="text" id="mail" name="mail" placeholder="Email">
 					<input type="password" id="password" name="password" placeholder="Password" required /> 
 					<button type="submit">Login</button>
@@ -52,11 +57,11 @@
 			
 			<br>
 
-			<div id='errorlogin'>
+			<%-- <div id='errorlogin'>
 				<c:if test="${(resultLogIN == false)}">
 					<p>email address and password not found</p>
 				</c:if>
-			</div>
+			</div> --%>
 
 		</div>
 	</div>
