@@ -32,7 +32,7 @@ a {
 	color: white;
 }
 
-h1 {
+h2 {
 	text-align: center;
 	font-family: 'Snell Roundhand';
 	font-style: cursive;
@@ -44,7 +44,7 @@ h1 {
 	margin-bottom: 100px;
 	margin-right: 150px;
 	margin-left: 80px;
-	
+	color: white;
 }
 
 p {

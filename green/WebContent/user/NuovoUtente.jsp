@@ -17,9 +17,7 @@
 </head>
 <body>
 
-	<h2>
-		<b>Registration</b>
-	</h2>
+
 
 	<br>
 	<div class="container-fluid">
@@ -49,13 +47,17 @@
 		</nav>
 	</div>
 
+
+
 	<div id='errorreg'>
 		<c:if test="${(resultRegistration == false)}">
 			<p>Your email address has already been added to our system</p>
 		</c:if>
 	</div>
 	<br>
-
+	<h2>
+		<b>Registration</b>
+	</h2>
 	<form action="/green/users/NewUser">
 
 		<div>
