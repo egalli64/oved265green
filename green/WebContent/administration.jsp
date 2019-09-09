@@ -32,6 +32,12 @@
 						Registered Users</a></li>
 				<li class="nav-item"><a class="nav-link" href="/green/admins/ShowTabAdm">Manage
 						Administrators</a></li>
+				<li class="nav-item"><p class="nav-link">     </p></li>
+				<li class="nav-item"><p class="nav-link">Logged user: </p></li>
+				<c:if test="${(user != null)}">
+					<li class="nav-item"><p class="nav-link">${user.adminName}  ${user.adminLastName}</p></li>
+				</c:if>
+
 			</ul>
 		</div>
 	</nav>
