@@ -34,24 +34,23 @@
 					<li class="nav-item"><p class="nav-link"></p></li>
 					<c:if test="${(loggedUser != null)}">
 						<li class="nav-item"><p class="nav-link">Logged user:</p></li>
-						<li class="nav-item"><p class="nav-link">${loggedUser.name}${loggedUser.lastName}</p></li>
+						<li class="nav-item"><p class="nav-link">${loggedUser.name}&Tab;${loggedUser.lastName}</p></li>
 					</c:if>
 				</ul>
 				<form class="form-inline my-2 my-lg-0" action="/green/users/UserLogIn">
-
-					<div>
+					<c:if test="${(resultLogIN == false)}">
 						<div id='errorlogin'>
-							<c:if test="${(resultLogIN == false)}">
-								<p>email address and password not found</p>
-							</c:if>
+							<p>email address and password not found</p>
 						</div>
-						<input type="text" id="mail" name="mail" placeholder="Email"> <input type="password"
-							id="password" name="password" placeholder="Password" required />
-						<button type="submit">Login</button>
-
-					</div>
+					</c:if>
+					<c:if test="${(loggedUser == null)}">
+						<div>
+							<input type="text" id="mail" name="mail" placeholder="Email"> <input type="password"
+								id="password" name="password" placeholder="Password" required />
+							<button type="submit">Login</button>
+						</div>
+					</c:if>
 					<div></div>
-
 				</form>
 			</div>
 		</nav>
@@ -61,13 +60,6 @@
 		<div>
 
 			<br>
-
-			<%-- <div id='errorlogin'>
-				<c:if test="${(resultLogIN == false)}">
-					<p>email address and password not found</p>
-				</c:if>
-			</div> --%>
-
 		</div>
 	</div>
 </body>
