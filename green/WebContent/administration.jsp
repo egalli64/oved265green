@@ -12,6 +12,7 @@
 </style>
 <title>Admins Home Page</title>
 </head>
+
 <body>
 	<nav class="navbar navbar-expand-lg  ">
 

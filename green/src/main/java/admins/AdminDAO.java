@@ -6,6 +6,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
+
 import javax.sql.DataSource;
 
 public class AdminDAO {
@@ -20,7 +22,7 @@ public class AdminDAO {
 		}
 	}
 
-	public boolean checkAdminByNameFLAndPassword(String firstName, String lastName, String password) {
+	public Optional<AdminBean> checkAdminByNameFLAndPassword(String firstName, String lastName, String password) {
 
 		try {
 			PreparedStatement checkAdminByNameFLAndPasswordQuery = null;
@@ -31,10 +33,23 @@ public class AdminDAO {
 			checkAdminByNameFLAndPasswordQuery.setString(3, password);
 			ResultSet rs = checkAdminByNameFLAndPasswordQuery.executeQuery();
 			rs.next();
+			PreparedStatement selectAdminsQuery = null;
+			String select = "SELECT * FROM adm WHERE first_name= ? AND last_name= ? AND password=? ";
+			selectAdminsQuery = conn.prepareStatement(select);
+			selectAdminsQuery.setString(1, firstName);
+			selectAdminsQuery.setString(2, lastName);
+			selectAdminsQuery.setString(3, password);			
+			ResultSet rs1 = selectAdminsQuery.executeQuery();
+			rs1.next();
 			if (rs.getInt(1) == 1) {
-				return true;
+				AdminBean admin = new AdminBean();
+				admin.setAdminName(rs1.getString("FIRST_NAME"));
+				admin.setAdminLastName(rs1.getString("LAST_NAME"));
+				admin.setMail(rs1.getString("EMAIL"));
+				admin.setPassword(rs1.getString("PASSWORD"));
+				return Optional.of(admin);
 			} else {
-				return false;
+				return Optional.empty();
 			}
 
 		} catch (SQLException se) {
