@@ -10,17 +10,13 @@ body {
 	background-color: #d9ffd9;
 }
 
+
 button:hover {
 	border: 2px solid #3e886c;
 	/* Green */
 	color: #3e886c;
 }
 
-label {
-	font-family: font_name, Comic Sans MS, sans-serif;
-	font-size: 20px;
-	color: white;
-}
 
 input:hover {
 	border: 2px solid #008080;
@@ -45,6 +41,7 @@ h1 {
 	margin-bottom: 100px;
 	margin-right: 150px;
 	margin-left: 80px;
+	
 }
 
 p {
