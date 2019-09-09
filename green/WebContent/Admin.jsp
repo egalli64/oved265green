@@ -50,7 +50,7 @@
 	</h2>
 
 	<div id='errorlogin'>
-		<c:if test="${logError}">
+		<c:if test="${(logError != null)&&(logError == true)}">
 			<p>User names or password not valid. Try again</p>
 		</c:if>
 	</div>

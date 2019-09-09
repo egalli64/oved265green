@@ -14,48 +14,52 @@
 </head>
 
 <body>
-<div class="container-fluid">
+	<div class="container-fluid">
 
-	<nav class="navbar navbar-expand-lg  ">
+		<nav class="navbar navbar-expand-lg  ">
 
-		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03"
-			aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
-		</button>
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03"
+				aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
 
-		<div class="collapse navbar-collapse" id="navbarColor03">
-			<ul class="navbar-nav mr-auto">
-				<li class="nav-item active"><a class="nav-link" href="#">Home <span class="sr-only"></span>
-				</a></li>
-				<li class="nav-item"><a class="nav-link" href="/green/NuovoUtente.jsp ">Sign up</a></li>
-				<li class="nav-item"><a class="nav-link" href="#">Price list</a></li>
-				<li class="nav-item"><a class="nav-link" href="#">About us</a></li>
-				<li class="nav-item"><a class="nav-link" href="/green/admins/AdminLogInBridge">Administrators</a></li>
-				
-			</ul>
-			<form class="form-inline my-2 my-lg-0" action="/green/users/UserLogIn">
+			<div class="collapse navbar-collapse" id="navbarColor03">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active"><a class="nav-link" href="#">Home <span class="sr-only"></span>
+					</a></li>
+					<li class="nav-item"><a class="nav-link" href="/green/NuovoUtente.jsp ">Sign up</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">Price list</a></li>
+					<li class="nav-item"><a class="nav-link" href="#">About us</a></li>
+					<li class="nav-item"><a class="nav-link" href="/green/admins/AdminLogInBridge">Administrators</a></li>
+					<li class="nav-item"><p class="nav-link"></p></li>
+					<c:if test="${(loggedUser != null)}">
+						<li class="nav-item"><p class="nav-link">Logged user:</p></li>
+						<li class="nav-item"><p class="nav-link">${loggedUser.name}${loggedUser.lastName}</p></li>
+					</c:if>
+				</ul>
+				<form class="form-inline my-2 my-lg-0" action="/green/users/UserLogIn">
 
-				<div>
-				<div id='errorlogin'>
-				<c:if test="${(resultLogIN == false)}">
-					<p>email address and password not found</p>
-				</c:if>
+					<div>
+						<div id='errorlogin'>
+							<c:if test="${(resultLogIN == false)}">
+								<p>email address and password not found</p>
+							</c:if>
+						</div>
+						<input type="text" id="mail" name="mail" placeholder="Email"> <input type="password"
+							id="password" name="password" placeholder="Password" required />
+						<button type="submit">Login</button>
+
+					</div>
+					<div></div>
+
+				</form>
 			</div>
-					<input type="text" id="mail" name="mail" placeholder="Email">
-					<input type="password" id="password" name="password" placeholder="Password" required /> 
-					<button type="submit">Login</button>
-					
-				</div>
-				<div></div>
-
-			</form>
-		</div>
-	</nav>
-</div>
+		</nav>
+	</div>
 
 	<div class="text-white text-center">
 		<div>
-			
+
 			<br>
 
 			<%-- <div id='errorlogin'>
