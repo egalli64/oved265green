@@ -31,6 +31,7 @@
 				<li class="nav-item"><a class="nav-link" href="#">Price list</a></li>
 				<li class="nav-item"><a class="nav-link" href="#">About us</a></li>
 				<li class="nav-item"><a class="nav-link" href="/green/admins/AdminLogInBridge">Administrators</a></li>
+				
 			</ul>
 			<form class="form-inline my-2 my-lg-0" action="/green/users/UserLogIn">
 
