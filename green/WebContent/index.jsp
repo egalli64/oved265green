@@ -36,6 +36,7 @@
 					<input type="text" id="mail" name="mail" placeholder="Email">
 					<input type="password" id="password" name="password" placeholder="Password" required /> 
 					<button type="submit">Login</button>
+					<button type="submit">Logout</button>
 
 
 				</div>

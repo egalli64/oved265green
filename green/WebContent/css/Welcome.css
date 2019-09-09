@@ -28,21 +28,6 @@ a {
 	color: white;
 }
 
-h1 {
-	text-align: center;
-	font-family: 'Snell Roundhand';
-	font-style: cursive;
-	font-variant: normal;
-	font-weight: 150;
-	font-size: 70px;
-	weight: 100%;
-	height: 100%;
-	margin-top: 100px;
-	margin-bottom: 100px;
-	margin-right: 150px;
-	margin-left: 80px;
-	position:bottom;
-}
 
 p {
 	color: #ff0000;
