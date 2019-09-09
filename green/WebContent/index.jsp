@@ -49,9 +49,7 @@
 
 	<div class="text-white text-center">
 		<div>
-			<h1>
-				<i><b>Welcome</b></i>
-			</h1>
+			
 			<br>
 
 			<div id='errorlogin'>
