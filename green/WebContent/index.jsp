@@ -30,7 +30,7 @@
 				<li class="nav-item"><a class="nav-link" href="/green/user/NuovoUtente.jsp ">Sign up</a></li>
 				<li class="nav-item"><a class="nav-link" href="#">Price list</a></li>
 				<li class="nav-item"><a class="nav-link" href="#">About us</a></li>
-				<li class="nav-item"><a class="nav-link" href="/green/administration/Admin.jsp">Administrators</a></li>
+				<li class="nav-item"><a class="nav-link" href="/Admin.jsp">Administrators</a></li>
 			</ul>
 			<form class="form-inline my-2 my-lg-0" action="/green/users/UserLogIn">
 

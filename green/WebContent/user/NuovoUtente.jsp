@@ -59,19 +59,57 @@
 		<b>Registration</b>
 	</h2>
 	<form action="/green/users/NewUser">
+	<!-- <form class="needs-validation" novalidate> -->
+
+		<div class="form-row">
+			<div class="col-md-4 mb-3">
+				<label for="firstname">First Name:</label> <input type="text"
+					class="form-control" id="firstname" name="firstName" required>
+
+			</div>
+			<div class="col-md-4 mb-3">
+				<label for="lastname">Last Name:</label> <input type="text"
+					class="form-control" id="lastname" name="LastName" required>
+
+			</div>
+			<div class="col-md-4 mb-3">
+				<label for="phone">Phone Number:</label> <input type="text"
+					class="form-control" id="phone" name="phone" required>
+
+
+
+			</div>
+		</div>
+
+		<div class="form-row">
+			<div class="col-md-4 mb-3">
+				<label for="email">Email:</label> <input type="text"
+					class="form-control" id="email" name="email" required>
+
+			</div>
+			<div class="col-md-4 mb-3">
+				<label for="birthdate"> Date of birth:</label> <input type="date"
+					class="form-control" id="birthdate" name="birthdate" required>
+			</div>
+			<div class="col-md-4 mb-3">
+				<label for="password"> Password:</label> <input type="password"
+					class="form-control" id="password" name="password" required>
+			</div>
+
+
+
+		</div>
+	</form>
+	
+	
+	
+	
+	
+	
+	
 
 		<div>
-			<label for="firstname">First Name:</label> <input type="text"
-				id="firstname" name="firstName" required> <br /> <br /> <label
-				for="lastname">Last Name:</label> <input type="text" id="lastname"
-				name="LastName" required> <br /> <br /> <label for="phone">Phone
-				Number:</label> <input type="text" id="phone" name="phone" required>
-			<br /> <br /> <label for="email">Email:</label> <input type="text"
-				id="email" name="email" required> <br /> <br /> <label
-				for="birthdate"> Date of birth:</label> <input type="date"
-				id="birthdate" name="birthdate" required> <br /> <br /> <label
-				for="password"> Password:</label> <input type="password"
-				id="password" name="password" required> <br /> <br /> <label
+		   <br /> <br />  <br /> <br /> <br /> <br /> <label
 				for="birthplace"> Birth place:</label> <input type="text"
 				id="birthplace" name="birthplace" required> <br /> <br />
 			<label for="license"> Driving license:</label> <input type="text"

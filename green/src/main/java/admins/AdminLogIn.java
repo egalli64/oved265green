@@ -35,7 +35,7 @@ public class AdminLogIn extends HttpServlet {
 			request.getRequestDispatcher("/administration/administration.jsp").forward(request, response);
 			
 		} else {			
-			request.getRequestDispatcher("/administration/Admin.jsp").forward(request, response);
+			request.getRequestDispatcher("/Admin.jsp").forward(request, response);
 		}
 	}
 
