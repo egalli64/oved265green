@@ -15,7 +15,7 @@
 <body>
 
 	<h2>
-		<i><b>Registration</b></i>
+		<b>Registration</b>
 	</h2>
 	<hr>
 	<br>

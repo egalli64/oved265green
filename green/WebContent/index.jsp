@@ -14,6 +14,8 @@
 </head>
 
 <body>
+<div class="container-fluid">
+
 	<nav class="navbar navbar-expand-lg  ">
 
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03"
@@ -36,16 +38,14 @@
 					<input type="text" id="mail" name="mail" placeholder="Email">
 					<input type="password" id="password" name="password" placeholder="Password" required /> 
 					<button type="submit">Login</button>
-					<button type="submit">Logout</button>
-
-
+					
 				</div>
 				<div></div>
 
 			</form>
 		</div>
 	</nav>
-
+</div>
 
 	<div class="text-white text-center">
 		<div>
