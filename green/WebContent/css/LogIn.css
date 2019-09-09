@@ -1,12 +1,13 @@
 @charset "ISO-8859-1";
 
 body {
-	background-image: url(/green/pic/audi.jpg); background-color : #d9ffd9;
+	background-image: url(/green/pic/audi.jpg); 
+	background-color : #d9ffd9;
 	background-size: 100%;
 	weight: 100%;
 	height: 100%;
 	background-color: #d9ffd9;
-}
+	}
 
 button:hover {
 	border: 2px solid #008080;
@@ -14,11 +15,6 @@ button:hover {
 	color: #008080;
 }
 
-label {
-	font-family: font_name, Comic Sans MS, sans-serif;
-	font-size: 20px;
-	color: white;
-}
 
 input:hover {
 	border: 2px solid #008080;
@@ -26,15 +22,16 @@ input:hover {
 	color: #008080;
 }
 
-a {
-	color: white;
-}
+
 
 h3 {
+	background-color : #3e886c;
+	
+	
 	text-align: center;
 	font-family: 'Snell Roundhand';
 	font-style: cursive;
-	font-variant: normal;
+	font-variant: cursive;
 	font-weight: 150;
 	font-size: 70px;
 	weight: 100%;
@@ -46,7 +43,11 @@ h3 {
 	color: white;
 }
 
-p {
-	color: #ff0000;
-	text-align: center;
+
+
+@font-face {
+font-family: 'Snell Roundhand';
+font-style: normal;
+font-weight: normal;
+src: local('Snell Roundhand'), url('SnellRoundhand.woff') format('woff');
 }
