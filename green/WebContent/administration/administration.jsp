@@ -23,11 +23,12 @@
 
 		<div class="collapse navbar-collapse" id="navbarColor03">
 			<ul class="navbar-nav mr-auto">
-				<li class="nav-item active"><a class="nav-link" href="/green/admins/LogOut">Log out<span
+
+				<li class="nav-item active"><a class="nav-link" href="/green/index.jsp">Home<span
 						class="sr-only"></span>
 				</a></li>
-				<li class="nav-item"><a class="nav-link" href="/green/administration/NuovoAdmin.jsp ">Add new
-						administrator</a></li>
+				<li class="nav-item"><a class="nav-link" href="/green/administration/NuovoAdmin.jsp ">Add
+						new administrator</a></li>
 				<li class="nav-item"><a class="nav-link" href="/green/admins/ShowTabUser">Manage
 						Registered Users</a></li>
 				<li class="nav-item"><a class="nav-link" href="/green/admins/ShowTabAdm">Manage
@@ -35,8 +36,11 @@
 				<li class="nav-item"><p class="nav-link"></p></li>
 				<li class="nav-item"><p class="nav-link">Logged user:</p></li>
 				<c:if test="${(loggedUser != null)}">
-					<li class="nav-item"><p class="nav-link">${loggedUser.name} ${loggedUser.lastName}</p></li>
+					<li class="nav-item"><p class="nav-link">${loggedUser.name}${loggedUser.lastName}</p></li>
 				</c:if>
+				<li class="nav-item active"><a class="nav-link" href="/green/admins/LogOut">Log out<span
+						class="sr-only"></span>
+				</a></li>
 
 			</ul>
 		</div>
