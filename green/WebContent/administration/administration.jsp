@@ -8,7 +8,7 @@
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 <style type="text/css">
-@import url(/green/css/Welcome.css);
+@import url(/green/css/administration.css);
 </style>
 <title>Admins Home Page</title>
 </head>
@@ -47,10 +47,7 @@
 	</nav>
 
 	<div class="text-white text-center">
-		<h1>
-			<i><b>Welcome back dear Administrator. Enjoy the rest of the day!</b></i>
-		</h1>
-		<br>
+				<br>
 
 	</div>
 </html>
