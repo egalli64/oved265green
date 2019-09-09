@@ -27,7 +27,7 @@
 			<ul class="navbar-nav mr-auto">
 				<li class="nav-item active"><a class="nav-link" href="#">Home <span class="sr-only"></span>
 				</a></li>
-				<li class="nav-item"><a class="nav-link" href="/green/user/NuovoUtente.jsp ">Sign up</a></li>
+				<li class="nav-item"><a class="nav-link" href="/green/NuovoUtente.jsp ">Sign up</a></li>
 				<li class="nav-item"><a class="nav-link" href="#">Price list</a></li>
 				<li class="nav-item"><a class="nav-link" href="#">About us</a></li>
 				<li class="nav-item"><a class="nav-link" href="/green/admins/AdminLogInBridge">Administrators</a></li>
