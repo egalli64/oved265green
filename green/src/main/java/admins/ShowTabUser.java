@@ -23,7 +23,7 @@ public class ShowTabUser extends HttpServlet {
 		
 		UserDAO userDao = new UserDAO(ds);		
 		request.setAttribute("users", userDao.showUsers());		
-		request.getRequestDispatcher("/usersTab.jsp").forward(request, response);
+		request.getRequestDispatcher("/administration/usersTab.jsp").forward(request, response);
 	}
 
 	@Override

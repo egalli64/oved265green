@@ -21,7 +21,8 @@ public class AdminsFilter implements Filter {
 		if (request instanceof HttpServletRequest) {
 			HttpServletRequest hsr = (HttpServletRequest) request;
 			HttpSession sessionAdmin = hsr.getSession();
-			if (sessionAdmin.getAttribute("admin") != null) {
+//			sessionAdmin.getAttribute("admin")
+			if (sessionAdmin.getAttribute("admin") != null ) {
 				chain.doFilter(request, response);
 			}else {
 				HttpServletResponse hsr1 = (HttpServletResponse) response;

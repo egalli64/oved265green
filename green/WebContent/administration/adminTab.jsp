@@ -33,8 +33,8 @@ shrink-to-fit=no">
 					</tr>
 					<c:forEach var="admin" items="${admins}">
 						<tr class="bg-danger text-white">
-							<td>${admin.adminName}</td>
-							<td>${admin.adminLastName}</td>
+							<td>${admin.name}</td>
+							<td>${admin.lastName}</td>
 							<td>${admin.mail}</td>
 						</tr>
 					</c:forEach>
@@ -44,7 +44,7 @@ shrink-to-fit=no">
 		<div class="row">
 			<div class="col"></div>
 			<div class="col">
-				<a href="/green/administration.jsp"><i>Administration Home Page</i></a>
+				<a href="/green/administration/administration.jsp"><i>Administration Home Page</i></a>
 			</div>
 			<div class="col"></div>
 		</div>

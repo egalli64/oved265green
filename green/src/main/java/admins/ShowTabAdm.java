@@ -22,7 +22,7 @@ public class ShowTabAdm extends HttpServlet {
 
 		AdminDAO adminDao = new AdminDAO(ds);
 		request.setAttribute("admins", adminDao.showAdmins());
-		request.getRequestDispatcher("/adminTab.jsp").forward(request, response);
+		request.getRequestDispatcher("/administration/adminTab.jsp").forward(request, response);
 	}
 
 	@Override

@@ -1,15 +1,11 @@
 package users;
 
 import java.time.LocalDate;
+import generalUser.GeneralUserBean;
 
-public class UserBean {
+public class UserBean extends GeneralUserBean{
 
-	private Long userId;
-	private String userName;
-	private String userLastName;
-	private String phoneNumber;
-	private String mail;
-	private String password;
+	private String phoneNumber;	
 	private LocalDate dateOfBirth;
 	private String placeOfbirth;
 	private String drivingLicense;
@@ -22,30 +18,6 @@ public class UserBean {
 
 	}
 
-	public Long getUserId() {
-		return userId;
-	}
-
-	public void setUserId(Long userId) {
-		this.userId = userId;
-	}
-
-	public String getUserName() {
-		return userName;
-	}
-
-	public void setUserName(String userName) {
-		this.userName = userName;
-	}
-
-	public String getUserLastName() {
-		return userLastName;
-	}
-
-	public void setUserLastName(String userLastName) {
-		this.userLastName = userLastName;
-	}
-
 	public String getPhoneNumber() {
 		return phoneNumber;
 	}
@@ -54,22 +26,6 @@ public class UserBean {
 		this.phoneNumber = phoneNumber;
 	}
 
-	public String getMail() {
-		return mail;
-	}
-
-	public void setMail(String mail) {
-		this.mail = mail;
-	}
-
-	public String getPassword() {
-		return password;
-	}
-
-	public void setPassword(String password) {
-		this.password = password;
-	}
-	
 	public LocalDate getDateOfBirth() {
 		return dateOfBirth;
 	}

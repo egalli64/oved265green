@@ -26,7 +26,7 @@
 				<li class="nav-item active"><a class="nav-link" href="/green/admins/LogOut">Log out<span
 						class="sr-only"></span>
 				</a></li>
-				<li class="nav-item"><a class="nav-link" href="/green/NuovoAdmin.jsp ">Add new
+				<li class="nav-item"><a class="nav-link" href="/green/administration/NuovoAdmin.jsp ">Add new
 						administrator</a></li>
 				<li class="nav-item"><a class="nav-link" href="/green/admins/ShowTabUser">Manage
 						Registered Users</a></li>
@@ -35,7 +35,7 @@
 				<li class="nav-item"><p class="nav-link"></p></li>
 				<li class="nav-item"><p class="nav-link">Logged user:</p></li>
 				<c:if test="${(admin != null)}">
-					<li class="nav-item"><p class="nav-link">${admin.adminName} ${admin.adminLastName}</p></li>
+					<li class="nav-item"><p class="nav-link">${admin.name} ${admin.lastName}</p></li>
 				</c:if>
 
 			</ul>

@@ -43,8 +43,8 @@ public class AdminDAO {
 			rs1.next();
 			if (rs.getInt(1) == 1) {
 				AdminBean admin = new AdminBean();
-				admin.setAdminName(rs1.getString("FIRST_NAME"));
-				admin.setAdminLastName(rs1.getString("LAST_NAME"));
+				admin.setName(rs1.getString("FIRST_NAME"));
+				admin.setLastName(rs1.getString("LAST_NAME"));
 				admin.setMail(rs1.getString("EMAIL"));
 				admin.setPassword(rs1.getString("PASSWORD"));
 				return Optional.of(admin);
@@ -83,8 +83,8 @@ public class AdminDAO {
 				ResultSet rs = selectAdminQuery.executeQuery();
 				AdminBean admin = new AdminBean();
 				while (rs.next()) {
-					admin.setAdminName(rs.getString("FIRST_NAME"));
-					admin.setAdminLastName(rs.getString("LAST_NAME"));
+					admin.setName(rs.getString("FIRST_NAME"));
+					admin.setLastName(rs.getString("LAST_NAME"));
 					admin.setMail(rs.getString("EMAIL"));
 					admin.setPassword(rs.getString("PASSWORD"));
 				}
@@ -108,8 +108,8 @@ public class AdminDAO {
 			ResultSet rs = selectAdminsQuery.executeQuery();
 			while (rs.next()) {
 				AdminBean admin = new AdminBean();
-				admin.setAdminName(rs.getString("FIRST_NAME"));
-				admin.setAdminLastName(rs.getString("LAST_NAME"));
+				admin.setName(rs.getString("FIRST_NAME"));
+				admin.setLastName(rs.getString("LAST_NAME"));
 				admin.setMail(rs.getString("EMAIL"));
 				admin.setPassword(rs.getString("PASSWORD"));
 				adminList.add(admin);

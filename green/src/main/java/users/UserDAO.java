@@ -92,8 +92,8 @@ public class UserDAO {
 			ResultSet rs = selectUserQuery.executeQuery();
 			while (rs.next()) {
 				UserBean user = new UserBean();
-				user.setUserName(rs.getString("FIRST_NAME"));
-				user.setUserLastName(rs.getString("LAST_NAME"));
+				user.setName(rs.getString("FIRST_NAME"));
+				user.setLastName(rs.getString("LAST_NAME"));
 				user.setPhoneNumber(rs.getString("PHONE_NUMBER"));
 				user.setMail(rs.getString("EMAIL"));
 				user.setPassword(rs.getString("PASSWORD"));

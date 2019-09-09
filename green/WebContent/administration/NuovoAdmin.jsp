@@ -38,7 +38,7 @@
 
 	</form>
 	<div>
-		<a href="/green/administration.jsp"><i>Administration Home Page</i></a>
+		<a href="/green/administration/administration.jsp"><i>Administration Home Page</i></a>
 	</div>
 </body>
 </html>

@@ -32,11 +32,10 @@ public class AdminLogIn extends HttpServlet {
 		
 		if (opt.isPresent()) {
 			sessionAdmin.setAttribute("admin", opt.get());			
-			request.getRequestDispatcher("/administration.jsp").forward(request, response);
+			request.getRequestDispatcher("/administration/administration.jsp").forward(request, response);
 			
-		} else {
-			request.setAttribute("resultLogIN", adminDao.checkAdminByNameFLAndPassword(firstName, lastName, password));
-			request.getRequestDispatcher("/Admin.jsp").forward(request, response);
+		} else {			
+			request.getRequestDispatcher("/administration/Admin.jsp").forward(request, response);
 		}
 	}
 

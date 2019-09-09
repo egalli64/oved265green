@@ -40,8 +40,8 @@ shrink-to-fit=no">
 
 					<c:forEach var="user" items="${users}">
 						<tr class="bg-danger text-white">
-							<td>${user.userName}</td>
-							<td>${user.userLastName}</td>
+							<td>${user.name}</td>
+							<td>${user.lastName}</td>
 							<td>${user.phoneNumber}</td>
 							<td>${user.mail}</td>
 							<td>${user.dateOfBirth}</td>
@@ -56,7 +56,7 @@ shrink-to-fit=no">
 		<div class="row">
 			<div class="col"></div>
 			<div class="col">
-				<a href="/green/administration.jsp"><i>Administration Home Page</i></a>
+				<a href="/green/administration/administration.jsp"><i>Administration Home Page</i></a>
 			</div>
 			<div class="col"></div>
 		</div>

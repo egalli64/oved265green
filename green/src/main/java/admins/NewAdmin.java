@@ -27,10 +27,10 @@ public class NewAdmin extends HttpServlet {
 		String password = request.getParameter("password");
 
 		if (adminDao.createNewAdmin(firstName, LastName, password, email)) {
-			request.getRequestDispatcher("/addConfirmed.html").forward(request, response);
+			request.getRequestDispatcher("/administration/addConfirmed.html").forward(request, response);
 		} else {
 			request.setAttribute("resultAdd", adminDao.createNewAdmin(firstName, LastName, password, email));
-			request.getRequestDispatcher("/NuovoAdmin.jsp").forward(request, response);
+			request.getRequestDispatcher("/administration/NuovoAdmin.jsp").forward(request, response);
 		}
 	}
 
