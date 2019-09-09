@@ -38,7 +38,7 @@
 			  <label for="email">Email:</label>
 			<input type="text" id="email" name="email" required> <br /> <br /> <label
 				for="password"> Password:</label> <input type="password" id="password" name="password" required>
-			<br /> <br />
+			<br /> <br/>
 		</div>
 		<div>
 			<button type="submit">Add</button>
