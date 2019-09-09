@@ -10,7 +10,7 @@
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 <style type="text/css">
-@import url(./css/NuovoUtente.css);
+@import url(/green/css/NuovoUtente.css);
 </style>
 
 <title>New User</title>
