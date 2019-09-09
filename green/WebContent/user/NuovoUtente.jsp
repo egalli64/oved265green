@@ -32,7 +32,7 @@
 
 			<div class="collapse navbar-collapse" id="navbarColor03">
 				<ul class="navbar-nav mr-auto">
-					<li class="nav-item active"><a class="nav-link" href="#">Home
+					<li class="nav-item active"><a class="nav-link" href="/green/index.jsp">Home
 							<span class="sr-only"></span>
 					</a></li>
 					<li class="nav-item"><a class="nav-link"
@@ -92,48 +92,72 @@
 					class="form-control" id="birthdate" name="birthdate" required>
 			</div>
 			<div class="col-md-4 mb-3">
-				<label for="password"> Password:</label> <input type="password"
-					class="form-control" id="password" name="password" required>
+				<label
+				for="birthplace"> Birth place:</label> <input type="text" class="form-control"
+				id="birthplace" name="birthplace" required>
 			</div>
 
 
 
 		</div>
-	</form>
-	
-	
-	
-	
-	
-	
-	
+		
+		<div class="form-row">
+			<div class="col-md-4 mb-3">
+				<label for="password"> Password:</label> <input type="password"
+					class="form-control" id="password" name="password" required>
+			</div>
 
-		<div>
-		   <br /> <br />  <br /> <br /> <br /> <br /> <label
-				for="birthplace"> Birth place:</label> <input type="text"
-				id="birthplace" name="birthplace" required> <br /> <br />
-			<label for="license"> Driving license:</label> <input type="text"
-				id="license" name="license" required> <br /> <br /> <label
+			<div class="col-md-4 mb-3">
+				<label for="license"> Driving license:</label> <input type="text" class="form-control"
+				id="license" name="license" required>
+			</div>
+			
+<div class="col-md-4 mb-3">
+				<label
 				for="expiration">Expiry of the driving licence:</label> <input
-				type="date" id="expiration" name="expirationLicense" required>
-			<br /> <br /> <label for="card"> Credit card:</label> <input
-				type="number" id="card" name="creditCard" max="9999999999999999"
-				required> <br /> <br /> <label for="cvv"> Cvv:</label> <input
-				type="number" id="cvv" name="cvv" max="999" required> <br />
-			<br /> <label for="expiration_c"> Credit card expiration:</label> <input
-				type="date" id="expiration_c" name="expirationCard" required>
-			<br /> <br />
+				type="date" class="form-control" id="expiration" name="expirationLicense" required>
+			</div>
+
+
 		</div>
+		
+		<div class="form-row">
+			<div class="col-md-4 mb-3">
+				<label for="card"> Credit card:</label> <input
+				type="number" class="form-control" id="card" name="creditCard" max="9999999999999999"
+				required>
+			</div>
+
+			<div class="col-md-4 mb-3">
+				<label for="cvv"> Cvv:</label> <input
+				type="number" class="form-control" id="cvv" name="cvv" max="999" required>
+			</div>
+			
+<div class="col-md-4 mb-3">
+				<label for="expiration_c"> Credit card expiration:</label> <input
+				type="date" class="form-control" id="expiration_c" name="expirationCard" required>
+			</div>
+
+
+		</div>
+		
 		<div>
 			<button type="submit">Register</button>
 		</div>
-
-		<br />
-
+		
+		
+		
 	</form>
-	<div>
-		<a href="/green/index.jsp"><i>Home Page</i></a>
-	</div>
+	
+	
+	
+	
+	
+	
+	
+
+		
+	
 
 </body>
 </html>
