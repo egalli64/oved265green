@@ -23,7 +23,7 @@
 
 		<div class="collapse navbar-collapse" id="navbarColor03">
 			<ul class="navbar-nav mr-auto">
-				<li class="nav-item active"><a class="nav-link" href="/green/index.jsp">Home <span
+				<li class="nav-item active"><a class="nav-link" href="/green/admins/LogOut">Log out<span
 						class="sr-only"></span>
 				</a></li>
 				<li class="nav-item"><a class="nav-link" href="/green/NuovoAdmin.jsp ">Add new
