@@ -1,4 +1,5 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
@@ -7,11 +8,14 @@
 
 <!-- STYLE -->
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1,
+<meta name="viewport"
+	content="width=device-width, initial-scale=1,
 shrink-to-fit=no">
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 <style type="text/css">
+@import url(/green/css/adminTab.css);
+
 #mytab {
 	text-align: center;
 }
@@ -21,34 +25,72 @@ shrink-to-fit=no">
 <body>
 
 	<div class="container-fluid">
+		<nav class="navbar navbar-expand-lg  ">
+
+			<button class="navbar-toggler" type="button" data-toggle="collapse"
+				data-target="#navbarColor03" aria-controls="navbarColor03"
+				aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarColor03">
+				<ul class="navbar-nav mr-auto">
+
+					<li class="nav-item active"><a class="nav-link"
+						href="/green/index.jsp">Home<span class="sr-only"></span>
+					</a></li>
+					<li class="nav-item"><a class="nav-link"
+						href="/green/administration/NuovoAdmin.jsp ">Add new
+							administrator</a></li>
+					<li class="nav-item"><a class="nav-link"
+						href="/green/admins/ShowTabUser">Manage Registered Users</a></li>
+					<li class="nav-item"><a class="nav-link"
+						href="/green/admins/ShowTabAdm">Manage Administrators</a></li>
+					<li class="nav-item"><p class="nav-link"></p></li>
+					<li class="nav-item"><p class="nav-link">Logged user:</p></li>
+					<c:if test="${(loggedUser != null)}">
+						<li class="nav-item"><p class="nav-link">${loggedUser.name}${loggedUser.lastName}</p></li>
+					</c:if>
+					<li class="nav-item active"><a class="nav-link"
+						href="/green/admins/LogOut">Log out<span class="sr-only"></span>
+					</a></li>
+				</ul>
+				<a href="/green/administration/administration.jsp" class="button">Back</a>
+			</div>
+			
+		</nav>
+		<br> <br> <br> <br> <br> <br> <br>
+		<br>
 		<div class="row"></div>
 
 		<c:if test="${(admins != null)}">
 			<div class="row mytab">
-				<table>
-					<tr class="bg-danger text-white">
-						<th>First Name</th>
-						<th>Last Name</th>
-						<th>Email</th>
-					</tr>
-					<c:forEach var="admin" items="${admins}">
-						<tr class="bg-danger text-white">
-							<td>${admin.name}</td>
-							<td>${admin.lastName}</td>
-							<td>${admin.mail}</td>
+				<table class="table table-hover table-dark">
+					<thead>
+						<tr>
+
+							<th scope="col">First Name</th>
+							<th scope="col">Last Name</th>
+							<th scope="col">Email</th>
 						</tr>
-					</c:forEach>
+					</thead>
+					<tbody>
+						<c:forEach var="admin" items="${admins}">
+							<tr>
+
+								<td>${admin.name}</td>
+								<td>${admin.lastName}</td>
+								<td>${admin.mail}</td>
+							</tr>
+						</c:forEach>
+					</tbody>
 				</table>
 			</div>
 		</c:if>
-		<div class="row">
-			<div class="col"></div>
-			<div class="col">
-				<a href="/green/administration/administration.jsp"><i>Administration Home Page</i></a>
-			</div>
-			<div class="col"></div>
-		</div>
+		
 	</div>
+
+
 
 </body>
 
