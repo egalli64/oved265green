@@ -92,6 +92,7 @@ public class UserDAO {
 			ResultSet rs = selectUserQuery.executeQuery();
 			while (rs.next()) {
 				UserBean user = new UserBean();
+				user.setId(rs.getLong("USER_ID"));
 				user.setName(rs.getString("FIRST_NAME"));
 				user.setLastName(rs.getString("LAST_NAME"));
 				user.setPhoneNumber(rs.getString("PHONE_NUMBER"));
@@ -111,6 +112,26 @@ public class UserDAO {
 			throw new IllegalStateException("Database issue " + se.getMessage());
 		}
 
+	}
+	
+	public boolean checkUserById(Long id) {
+
+		try {
+			PreparedStatement checkUserByIdQuery = null;
+			String s = "SELECT COUNT(*) FROM users WHERE user_id=?";
+			checkUserByIdQuery = conn.prepareStatement(s);
+			checkUserByIdQuery.setLong(1, id);
+			ResultSet rs = checkUserByIdQuery.executeQuery();
+			rs.next();
+			if (rs.getInt(1) == 1) {
+				return true;
+			} else {
+				return false;
+			}
+
+		} catch (SQLException se) {
+			throw new IllegalStateException("Database issue " + se.getMessage());
+		}
 	}
 
 }

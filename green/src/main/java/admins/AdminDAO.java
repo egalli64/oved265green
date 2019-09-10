@@ -43,6 +43,7 @@ public class AdminDAO {
 			rs1.next();
 			if (rs.getInt(1) == 1) {
 				AdminBean admin = new AdminBean();
+				admin.setId(rs1.getLong("USER_ID"));
 				admin.setName(rs1.getString("FIRST_NAME"));
 				admin.setLastName(rs1.getString("LAST_NAME"));
 				admin.setMail(rs1.getString("EMAIL"));
@@ -83,6 +84,7 @@ public class AdminDAO {
 				ResultSet rs = selectAdminQuery.executeQuery();
 				AdminBean admin = new AdminBean();
 				while (rs.next()) {
+					admin.setId(rs.getLong("USER_ID"));
 					admin.setName(rs.getString("FIRST_NAME"));
 					admin.setLastName(rs.getString("LAST_NAME"));
 					admin.setMail(rs.getString("EMAIL"));
@@ -108,6 +110,7 @@ public class AdminDAO {
 			ResultSet rs = selectAdminsQuery.executeQuery();
 			while (rs.next()) {
 				AdminBean admin = new AdminBean();
+				admin.setId(rs.getLong("USER_ID"));
 				admin.setName(rs.getString("FIRST_NAME"));
 				admin.setLastName(rs.getString("LAST_NAME"));
 				admin.setMail(rs.getString("EMAIL"));

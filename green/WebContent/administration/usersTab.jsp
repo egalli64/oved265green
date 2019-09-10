@@ -9,14 +9,16 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1,
 shrink-to-fit=no">
-<link rel="stylesheet"
-	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet"	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 <style type="text/css">
 #mytab {
 	text-align: center;
 }
 </style>
 
+<!-- SCRIPTS IMPORT -->
+<script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="scripts/userTab.js"></script>
 
 </head>
 <body>
@@ -53,6 +55,10 @@ shrink-to-fit=no">
 							<td>${user.placeOfbirth}</td>
 							<td>${user.drivingLicense}</td>
 							<td>${user.expiringDateDrivingLicense}</td>
+							<td><a href="/green/admins/CheckUserId?id=${user.id}"><button>Edit row</button></a></td>
+							<c:if test="${(resultIdCheck == false)}">
+							<td>USER NOT FOUND IN DATABASE</td>
+							</c:if>
 						</tr>
 						
 					</c:forEach>
