@@ -32,6 +32,9 @@ input:hover {
 a {
 	color: white;
 }
+a:hover {
+	color: white;
+}
 
 h2 {
 	text-align: center;
