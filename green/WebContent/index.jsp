@@ -37,7 +37,7 @@
 						<li class="nav-item"><p class="nav-link">${loggedUser.name}&Tab;${loggedUser.lastName}</p></li>
 					</c:if>
 				</ul>
-				<form class="form-inline my-2 my-lg-0" action="/green/users/UserLogIn">
+				<form class="form-inline my-2 my-lg-0" action="/green/users/UserLogIn" method="post">
 					<c:if test="${(resultLogIN == false)}">
 						<div id='errorlogin'>
 							<p>email address and password not found</p>

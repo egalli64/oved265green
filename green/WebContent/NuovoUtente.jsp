@@ -19,7 +19,6 @@
 
 
 
-	<br>
 	<div class="container-fluid">
 
 		<nav class="navbar navbar-expand-lg  ">
@@ -56,7 +55,7 @@
 	</div>
 	<br>
 	<h2>
-		<b>Registration</b>
+		<b><i>Registration</i></b>
 	</h2>
 	<form action="/green/users/NewUser">
 	<!-- <form class="needs-validation" novalidate> -->
