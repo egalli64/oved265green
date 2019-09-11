@@ -113,7 +113,7 @@ public class UserDAO {
 		}
 
 	}
-	
+
 	public boolean checkUserById(Long id) {
 
 		try {
@@ -132,6 +132,64 @@ public class UserDAO {
 		} catch (SQLException se) {
 			throw new IllegalStateException("Database issue " + se.getMessage());
 		}
+	}
+
+	public UserBean getUserbyId(Long id) {
+
+		try {
+			PreparedStatement selectUserQuery = null;
+			String select = "SELECT * FROM users WHERE user_id=?";
+			selectUserQuery = conn.prepareStatement(select);
+			selectUserQuery.setLong(1, id);
+			ResultSet rs = selectUserQuery.executeQuery();
+			rs.next();
+			UserBean user = new UserBean();
+			user.setId(rs.getLong("USER_ID"));
+			user.setName(rs.getString("FIRST_NAME"));
+			user.setLastName(rs.getString("LAST_NAME"));
+			user.setPhoneNumber(rs.getString("PHONE_NUMBER"));
+			user.setMail(rs.getString("EMAIL"));
+			user.setPassword(rs.getString("PASSWORD"));
+			user.setDateOfBirth((rs.getDate("DATA_NASCITA")).toLocalDate());
+			user.setPlaceOfbirth(rs.getString("LUOGO_NASCITA"));
+			user.setDrivingLicense(rs.getString("N_PATENTE"));
+			user.setExpiringDateDrivingLicense((rs.getDate("SCADENZA_PATENTE")).toLocalDate());
+			user.setCreditCardNumber(rs.getLong("CARTA_CREDITO"));
+			user.setCvv(rs.getInt("CVV"));
+			user.setExpiringDateCreditCard((rs.getDate("SCADENZA_CARTA")).toLocalDate());
+			return user;
+		} catch (SQLException se) {
+			throw new IllegalStateException("Database issue " + se.getMessage());
+		}
+
+	}
+
+	public boolean updateUser(Long id, String firstName, String LastName, String phone, String email,
+			LocalDate birthdate, String birthplace, String license, LocalDate expirationLicense) {
+
+		try {
+			PreparedStatement updateUserUpdate = null;
+			String s = "UPDATE users SET first_name=?, last_name=?, phone_number=?, email=?, data_nascita=?, luogo_nascita=?, n_patente=?, scadenza_patente=? WHERE user_id=?";
+			updateUserUpdate = conn.prepareStatement(s);
+			updateUserUpdate.setString(1, firstName);
+			updateUserUpdate.setString(2, LastName);
+			updateUserUpdate.setString(3, phone);
+			updateUserUpdate.setString(4, email);
+			updateUserUpdate.setDate(5, Date.valueOf(birthdate));
+			updateUserUpdate.setString(6, birthplace);
+			updateUserUpdate.setString(7, license);
+			updateUserUpdate.setDate(8, Date.valueOf(expirationLicense));
+			updateUserUpdate.setLong(9, id);
+			int succeded = updateUserUpdate.executeUpdate();
+			if (succeded == 1) {
+				return true;
+			} else {
+				return false;
+			}
+		} catch (SQLException se) {
+			throw new IllegalStateException("Database issue " + se.getMessage());
+		}
+
 	}
 
 }
