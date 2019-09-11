@@ -12,6 +12,7 @@ shrink-to-fit=no">
 <link rel="stylesheet"
 	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 <style type="text/css">
+@import url(/green/css/usersTab.css);
 #mytab {
 	text-align: center;
 }
@@ -23,6 +24,44 @@ shrink-to-fit=no">
 
 </head>
 <body>
+
+<!-- 	<div class="container-fluid"> -->
+		<nav class="navbar navbar-expand-lg  ">
+
+			<button class="navbar-toggler" type="button" data-toggle="collapse"
+				data-target="#navbarColor03" aria-controls="navbarColor03"
+				aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarColor03">
+				<ul class="navbar-nav mr-auto">
+
+					<li class="nav-item active"><a class="nav-link"
+						href="/green/index.jsp">Home<span class="sr-only"></span>
+					</a></li>
+					<li class="nav-item"><a class="nav-link"
+						href="/green/administration/NuovoAdmin.jsp ">Add new
+							administrator</a></li>
+					<li class="nav-item"><a class="nav-link"
+						href="/green/admins/ShowTabUser">Manage Registered Users</a></li>
+					<li class="nav-item"><a class="nav-link"
+						href="/green/admins/ShowTabAdm">Manage Administrators</a></li>
+					<li class="nav-item"><p class="nav-link"></p></li>
+					<li class="nav-item"><p class="nav-link">Logged user:</p></li>
+					<c:if test="${(loggedUser != null)}">
+						<li class="nav-item"><p class="nav-link">${loggedUser.name}${loggedUser.lastName}</p></li>
+					</c:if>
+					<li class="nav-item active"><a class="nav-link"
+						href="/green/admins/LogOut">Log out<span class="sr-only"></span>
+					</a></li>
+				</ul>
+				<a href="/green/administration/administration.jsp" class="button">Back</a>
+			</div>
+			
+		</nav>
+		<br> <br> <br> <br> <br> <br> <br>
+		<br>
 
 	<div class="container-fluid">
 		<div class="row"></div>
@@ -41,6 +80,7 @@ shrink-to-fit=no">
 							<th scope="col">Place of birth</th>
 							<th scope="col">Driving License No</th>
 							<th scope="col">Driving License Expiring Date</th>
+							<th scope="col"> </th>
 						</tr>
 					</thead>
 					<tbody>
@@ -71,13 +111,13 @@ shrink-to-fit=no">
 				</table>
 			</div>
 		</c:if>
-		<div class="row">
+		<!-- <div class="row">
 			<div class="col"></div>
 			<div class="col">
 				<a href="/green/administration/administration.jsp"><i>Administration Home Page</i></a>
 			</div>
 			<div class="col"></div>
-		</div>
+		</div> -->
 	</div>
 
 </body>
