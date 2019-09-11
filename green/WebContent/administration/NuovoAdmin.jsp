@@ -46,7 +46,7 @@
 						href="/green/admins/LogOut">Log out<span class="sr-only"></span>
 					</a></li>
 				</ul>
-				<a href="/green/administration/administration.jsp" class="button"> << Back </a>
+				<a href="/green/administration/administration.jsp" class="button"> &laquo; Back </a>
 			</div>
 			
 			
