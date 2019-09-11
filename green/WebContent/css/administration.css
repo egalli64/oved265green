@@ -33,6 +33,10 @@ a {
 	color: white;
 }
 
+a:hover {
+	color: white;
+}
+
 h2 {
 	text-align: center;
 	font-family: 'Snell Roundhand';
