@@ -1,8 +1,9 @@
 @charset "ISO-8859-1";
 
 body {
-	background-image: url(/green/pic/Login.jpg); 
+	background-image: url(/green/pic/Login.jpg) ; background-color : #3e886c;
 	background-size: 100%;
+	background-repeat: no-repeat;
 	weight: 100%;
 	height: 100%;
 	background-color: #3e886c;
@@ -46,4 +47,23 @@ font-family: 'Snell Roundhand';
 font-style: normal;
 font-weight: normal;
 src: local('Snell Roundhand'), url('SnellRoundhand.woff') format('woff');
+}
+
+nav {
+	background-color: black;
+	overflow: hidden;
+	color: white;
+}
+
+nav:hover {
+	background-color: #3e886c;
+	color: white;
+}
+
+a {
+	color: white;
+}
+
+a:hover {
+	color: white;
 }
