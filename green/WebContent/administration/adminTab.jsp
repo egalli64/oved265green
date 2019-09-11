@@ -55,12 +55,15 @@ shrink-to-fit=no">
 						href="/green/admins/LogOut">Log out<span class="sr-only"></span>
 					</a></li>
 				</ul>
-				<a href="/green/administration/administration.jsp" class="button">Back</a>
+				<a href="/green/administration/administration.jsp" class="button"> &laquo; Back </a>
 			</div>
 			
 		</nav>
-		<br> <br> <br> <br> <br> <br> <br>
-		<br>
+		<br><br><br>
+		<h2>
+		<i><b>Administrations</b></i>
+	</h2>
+		
 		<div class="row"></div>
 
 		<c:if test="${(admins != null)}">
