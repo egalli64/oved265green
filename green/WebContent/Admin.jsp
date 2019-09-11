@@ -37,6 +37,7 @@
 					<li class="nav-item"><a class="nav-link"
 						href="/green/Admin.jsp">Administrators</a></li>
 				</ul>
+				<a href="/green/index.jsp" class="button"> &laquo; Back </a>
 			</div>
 		</nav>
 	</div>
