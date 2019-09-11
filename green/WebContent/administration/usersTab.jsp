@@ -60,8 +60,11 @@ shrink-to-fit=no">
 			</div>
 			
 		</nav>
-		<br> <br> <br> <br> <br> <br> <br>
-		<br>
+		
+		<h2>
+		<i><b>Users</b></i>
+	</h2>
+		
 
 	<div class="container-fluid">
 		<div class="row"></div>
