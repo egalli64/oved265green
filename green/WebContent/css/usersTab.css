@@ -45,3 +45,11 @@ h2 {
 	margin-left: 80px;
 	color: white;
 }
+
+a {
+	color: white;
+}
+
+a:hover {
+	color: white;
+}
