@@ -61,7 +61,7 @@ shrink-to-fit=no">
 		</nav>
 		<br><br><br>
 		<h2>
-		<i><b>Administrations</b></i>
+		<i><b>Administrators</b></i>
 	</h2>
 		
 		<div class="row"></div>
