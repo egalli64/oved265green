@@ -28,6 +28,9 @@ a {
 	color: white;
 }
 
+a:hover {
+	color: white;
+}
 
 h1 {
 	text-align: center;
@@ -45,6 +48,10 @@ h1 {
 	
 }
 
+li {
+	color: white;
+}
+
 
 p {
 	color: #ff0000;
@@ -54,9 +61,10 @@ p {
 nav {
 	background-color: black;
 	overflow: hidden;
+	color: white;
 }
 
 nav:hover {
 	background-color: #3e886c;
-	color: black;
+	color: white;
 }
