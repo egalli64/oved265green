@@ -51,7 +51,10 @@
 			</div>
 			
 		</nav>
-		<br><br><br>
+		<br><br>
+		<h2><b><i> Manage Registered Users </i></b></h2>
+		
+		
 
 	<form action="/green/admins/EditUser" method="post">
 		<div class="form-row">
@@ -88,6 +91,7 @@
 					id="birthplace" name="birthplace" value="${user.placeOfbirth}">
 			</div>
 		</div>
+		<div class="form-row">
 		<div class="col-md-4 mb-3">
 			<label for="license"> Driving license:</label> <input type="text" class="form-control"
 				id="license" name="license" value="${user.drivingLicense}">
@@ -97,6 +101,7 @@
 				class="form-control" id="expiration" name="expirationLicense"
 				value="${user.expiringDateDrivingLicense}">
 		</div>
+		</div>
 		<div>
 			<button type="submit">Confirm</button>
 		</div>
@@ -105,7 +110,7 @@
 
 	</form>
 
-
+</div>
 
 
 
