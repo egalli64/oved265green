@@ -23,9 +23,10 @@ public class CheckUserId extends HttpServlet {
 			throws ServletException, IOException {
 
 		UserDAO userDao = new UserDAO(ds);
-		Long id = Long.parseLong(request.getParameter("id"));		
-
+		Long id = Long.parseLong(request.getParameter("id"));			
+		
 		if (userDao.checkUserById(id)) {
+			request.setAttribute("user", userDao.getUserbyId(id));
 			request.getRequestDispatcher("/administration/userRowEditer.jsp").forward(request, response);
 		} else {
 			request.setAttribute("resultIdCheck", false);
