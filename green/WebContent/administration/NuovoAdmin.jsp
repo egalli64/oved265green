@@ -5,14 +5,15 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<style type="text/css">
+@import url(/green/css/NuovoAdmin.css);
+</style>
+<title>Nuovo Admin</title>
 </head>
 <body>
-	<h2>
-		<i><b>New Admin</b></i>
-	</h2>
-	<hr>
-	<br>
+	
 	
 	<div class="container-fluid">
 		<nav class="navbar navbar-expand-lg  ">
@@ -45,11 +46,18 @@
 						href="/green/admins/LogOut">Log out<span class="sr-only"></span>
 					</a></li>
 				</ul>
-				<a href="/green/administration/administration.jsp" class="button">Back</a>
+				<a href="/green/administration/administration.jsp" class="button"> << Back </a>
 			</div>
+			
+			
 			
 		</nav>
 		</div>
+		
+		<h2>
+		<i><b>New Admin</b></i>
+	</h2>
+	
 
 	<div id='errorreg'>
 		<c:if test="${(resultAdd == false)}">
@@ -94,9 +102,6 @@
 		<br />
 
 	</form>
-	<div>
-		<a href="/green/administration/administration.jsp"><i>Administration
-				Home Page</i></a>
-	</div>
+	
 </body>
 </html>
